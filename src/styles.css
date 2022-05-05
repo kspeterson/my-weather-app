@@ -1,0 +1,95 @@
+body {
+  font-family: monospace;
+}
+.container {
+  border: 4px solid yellow;
+  border-radius: 20px;
+  padding: 15px 5px;
+  width: 45%;
+  display: block;
+  margin: 60px auto;
+}
+.currentWeatherBorder {
+  border: 2px solid rgb(122, 137, 219);
+  max-width: 350px;
+  border-radius: 20px;
+  margin: 5px 0px 20px 35px;
+}
+
+.currentEmoji {
+  font-size: 65px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.temperature {
+  text-align: right;
+  font-size: 30px;
+}
+
+input {
+  margin: 10px -5px 10px 10px;
+}
+.enterCity {
+  width: 325px;
+  padding: 5px;
+}
+.row {
+  margin: 0 auto;
+}
+.precipWinds {
+  text-align: right;
+}
+.weekDays,
+.weatherDescription {
+  text-align: center;
+}
+.forecast {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  padding: 10px 0 0 0;
+}
+.currentcityName {
+  font-size: 44px;
+  font-style: oblique;
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 40px;
+}
+.currentTime {
+  font-size: 18px;
+  font-style: unset;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+}
+.currentTemp {
+  font-size: 36px;
+  margin: 0 auto;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.7);
+}
+.weatherDescription {
+  font-size: 14px;
+  margin: 3px 0 0 0;
+}
+.precipWinds {
+  font-size: 20px;
+  margin-top: 75px;
+  font-weight: 100;
+}
+.weekDays {
+  font-size: 20px;
+}
+.emojiDays {
+  font-size: 46px;
+  margin: 0 auto;
+}
+.tempDays {
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+  font-size: 16px;
+}
+.degrees {
+  font-size: 24px;
+}
