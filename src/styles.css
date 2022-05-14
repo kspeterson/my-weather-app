@@ -7,7 +7,7 @@ body {
   padding: 15px 5px;
   width: 45%;
   display: block;
-  margin: 60px auto;
+  margin: 60px auto 20px auto;
 }
 .currentWeatherBorder {
   border: 2px solid rgb(122, 137, 219);
@@ -92,4 +92,9 @@ input {
 }
 .degrees {
   font-size: 24px;
+}
+
+.githubLink {
+  text-align: center;
+  font-size: 11px;
 }
