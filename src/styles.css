@@ -2,15 +2,15 @@ body {
   font-family: monospace;
 }
 .container {
-  border: 4px solid yellow;
+  border: 3px solid rgba(255, 255, 79, 0.6);
   border-radius: 20px;
-  padding: 15px 5px;
+  padding: 15px 5px 5px 0px;
   width: 45%;
   display: block;
-  margin: 60px auto 20px auto;
+  margin: 60px auto 5px auto;
 }
 .currentWeatherBorder {
-  border: 2px solid rgb(122, 137, 219);
+  border: 2px solid rgba(122, 137, 219, 0.3);
   max-width: 350px;
   border-radius: 20px;
   margin: 5px 0px 20px 35px;
@@ -48,7 +48,7 @@ input {
   font-size: 24px;
   font-style: italic;
   font-weight: 600;
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 10px;
 }
 .currentcityName {
   font-size: 44px;
@@ -95,6 +95,11 @@ input {
 }
 
 .githubLink {
-  text-align: center;
-  font-size: 11px;
+  font-size: 13px;
+  text-indent: 555px;
+}
+
+.humiditydescrip,
+.windsdescrip {
+  opacity: 0.7;
 }
