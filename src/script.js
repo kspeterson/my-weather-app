@@ -1,27 +1,25 @@
-let now = new Date();
-let weekDays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let day = weekDays[now.getDay()];
-let currentTime = document.querySelector("#current-time");
-let hours = now.getHours();
-let minutes = now.getMinutes();
-
-if (hours < 10) {
-  hours = `0${hours}`;
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = weekDays[date.getDay()];
+  return `${day}, ${hours}:${minutes}`;
 }
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-currentTime.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function updateWeather(response) {
   document.querySelector("#display-city").innerHTML = response.data.name;
@@ -30,10 +28,12 @@ function updateWeather(response) {
   let weatherDescription = document.querySelector("#weather-description");
   let humidityPercent = document.querySelector("#humidity-percent");
   let windSpeed = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#location-time");
   tempElement.innerHTML = `${temp}`;
   weatherDescription.innerHTML = response.data.weather[0].description;
   humidityPercent.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  timeElement.innerHTML = formatTime(response.data.dt * 1000);
 }
 
 function searchCity(city) {

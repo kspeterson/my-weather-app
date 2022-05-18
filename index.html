@@ -40,12 +40,14 @@
 
         <span class="currentWeatherBorder">
           <div class="row">
-            <div class="col-12 currentcityName">
-              <span id="display-city"> </span>
+            <div class="col-12 currentCityName">
+              <span class="cityDisplayName" id="display-city"> </span>
               <br />
-              <p class="currentTime" id="current-time">
-                <em> </em>
-              </p>
+              <span class="displayTime"> <span class="lastUpdatedTime">
+                Last updated: </span>
+                  <span class="locationTime"
+                  id="location-time"> </span>
+              </span></span>
             </div>
           </div>
           <div class="row">
@@ -53,7 +55,10 @@
               <span id="emoji-display-current">⛅</span></span
             >
             <span class="col-6 weatherDescription">
-              <span id="weather-description"><em> </em></span>
+              <span
+                class="weathDescriptionWords"
+                id="weather-description"
+              ></span>
               <br />
               <p class="currentTemp">
                 <span class="displayTemp" id="display-temp"> </span>

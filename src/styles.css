@@ -50,18 +50,20 @@ input {
   font-weight: 600;
   padding: 10px 0 0 10px;
 }
-.currentcityName {
+.currentCityName {
+  padding: 0 0 20px;
+}
+.cityDisplayName {
   font-size: 44px;
   font-style: oblique;
-  margin: 10px 0 0 0;
-  padding: 0;
-  line-height: 40px;
-}
-.currentTime {
-  font-size: 18px;
-  font-style: unset;
-  color: rgba(0, 0, 0, 0.6);
   margin: 0 auto;
+}
+.locationTime,
+.lastUpdatedTime {
+  font-size: 16px;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 0;
 }
 .currentTemp {
   font-size: 36px;
@@ -72,6 +74,9 @@ input {
 .weatherDescription {
   font-size: 14px;
   margin: 3px 0 0 0;
+}
+.weathDescriptionWords {
+  font-style: italic;
 }
 .precipWinds {
   font-size: 20px;
