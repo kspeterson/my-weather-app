@@ -94,15 +94,10 @@ input {
   font-style: italic;
   font-size: 16px;
 }
-.degrees {
-  font-size: 24px;
-}
-
 .githubLink {
   font-size: 13px;
   text-indent: 555px;
 }
-
 .humiditydescrip,
 .windsdescrip {
   opacity: 0.7;
@@ -110,4 +105,14 @@ input {
 .degrees {
   font-size: 18px;
   vertical-align: text-top;
+  text-decoration: none;
+  cursor: default;
+}
+.farenheitLink,
+.celsiusLink {
+  text-decoration: none;
+  cursor: default;
+}
+.degrees .active {
+  color: black;
 }

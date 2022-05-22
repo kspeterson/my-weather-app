@@ -21,6 +21,8 @@ function formatTime(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+farenheitTemp = null;
+
 function updateWeather(response) {
   document.querySelector("#display-city").innerHTML = response.data.name;
   let temp = Math.round(response.data.main.temp);
@@ -30,6 +32,7 @@ function updateWeather(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#location-time");
   let iconElement = document.querySelector("#weather-icon");
+  farenheitTemp = response.data.main.temp;
   tempElement.innerHTML = `${temp}`;
   weatherDescription.innerHTML = response.data.weather[0].description;
   humidityPercent.innerHTML = response.data.main.humidity;
@@ -81,3 +84,26 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#button-current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertCelsius);
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", convertFarenheit);
+
+function convertCelsius(event) {
+  event.preventDefault();
+  farenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  let tempElement = document.querySelector("#display-temp");
+  let celsuisTemp = (farenheitTemp - 32) * 0.5556;
+  tempElement.innerHTML = Math.round(celsuisTemp);
+}
+
+function convertFarenheit(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  let tempElement = document.querySelector("#display-temp");
+  tempElement.innerHTML = Math.round(farenheitTemp);
+}
