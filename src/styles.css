@@ -8,12 +8,14 @@ body {
   width: 45%;
   display: block;
   margin: 60px auto 5px auto;
+  box-shadow: 2px 2px 15px rgb(128, 126, 126);
 }
 .currentWeatherBorder {
   border: 2px solid rgba(122, 137, 219, 0.3);
   max-width: 350px;
   border-radius: 20px;
   margin: 5px 0px 20px 35px;
+  box-shadow: 1px 1px 6px rgb(128, 126, 126);
 }
 
 .currentEmoji {
