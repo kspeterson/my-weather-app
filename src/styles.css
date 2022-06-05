@@ -21,7 +21,7 @@ body {
 .currentEmoji {
   font-size: 65px;
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .temperature {
@@ -70,7 +70,10 @@ input {
   font-size: 50px;
   margin: 0 auto;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.86);
+}
+.currentTemp .degrees {
+  color: rgba(0, 0, 0, 0.75);
 }
 .weatherDescription {
   font-size: 14px;
@@ -86,13 +89,15 @@ input {
 }
 .weekDays {
   font-size: 20px;
+  font-style: italic;
+  opacity: 0.9;
 }
 .emojiDays {
   font-size: 46px;
   margin: 0 auto;
 }
 .tempDays {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   font-style: italic;
   font-size: 16px;
 }

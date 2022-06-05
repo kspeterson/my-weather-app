@@ -136,26 +136,3 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#button-current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-function convertCelsius(event) {
-  event.preventDefault();
-  farenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let tempElement = document.querySelector("#display-temp");
-  let celsuisTemp = (farenheitTemp - 32) * 0.5556;
-  tempElement.innerHTML = Math.round(celsuisTemp);
-}
-
-function convertFarenheit(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  farenheitLink.classList.add("active");
-  let tempElement = document.querySelector("#display-temp");
-  tempElement.innerHTML = Math.round(farenheitTemp);
-}
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertCelsius);
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", convertFarenheit);
