@@ -1,5 +1,15 @@
 body {
   font-family: monospace;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(215, 223, 252) 0%,
+    rgb(255, 255, 255) 0%,
+    rgb(215, 223, 252) 84%
+  );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .container {
   border: 3px solid rgba(255, 255, 79, 0.6);
@@ -7,15 +17,17 @@ body {
   padding: 15px 5px 5px 0px;
   width: 45%;
   display: block;
-  margin: 60px auto 5px auto;
-  box-shadow: 2px 2px 15px rgb(128, 126, 126);
+  margin: 100px auto 5px auto;
+  box-shadow: 5px 5px 15px rgb(128, 126, 126);
+  background-color: white;
 }
-.currentWeatherBorder {
+.container .currentWeatherBorder {
   border: 2px solid rgba(122, 137, 219, 0.3);
   max-width: 350px;
   border-radius: 20px;
   margin: 5px 0px 20px 35px;
   box-shadow: 1px 1px 6px rgb(128, 126, 126);
+  background-color: white;
 }
 
 .currentEmoji {
@@ -35,6 +47,9 @@ input {
 .enterCity {
   width: 325px;
   padding: 5px;
+  margin: 0px 0px 0px 23px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 .row {
   margin: 0 auto;
