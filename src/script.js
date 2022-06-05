@@ -21,9 +21,32 @@ function formatTime(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col weekDays">
+            <span id="weather-forecast-weekday">${day}</span> <br />
+            <p class="emojiDays"><span id="weather-forecast-emojis">⛅</span></p>
+            <p class="tempDays"><span id="weather-forecast-temp-max">50°</span>
+             | 
+             <span id="weather-forecast-temp-min">45°</span></p>
+          </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 farenheitTemp = null;
 
 function updateWeather(response) {
+  console.log(response.data);
   document.querySelector("#display-city").innerHTML = response.data.name;
   let temp = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#display-temp");
@@ -69,6 +92,7 @@ let form = document.querySelector("#search-city");
 form.addEventListener("submit", showCity);
 
 searchCity(`New York`);
+displayForecast();
 
 function searchLocation(position) {
   let units = "imperial";
@@ -84,12 +108,6 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#button-current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertCelsius);
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", convertFarenheit);
 
 function convertCelsius(event) {
   event.preventDefault();
@@ -107,3 +125,9 @@ function convertFarenheit(event) {
   let tempElement = document.querySelector("#display-temp");
   tempElement.innerHTML = Math.round(farenheitTemp);
 }
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertCelsius);
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", convertFarenheit);
